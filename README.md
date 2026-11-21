@@ -30,6 +30,21 @@ claude plugin install usage-band --marketplace sky21peanuts/usage-band
 
 デスクトップアプリでは `/plugin` が使えません。プロンプト欄の **+** → **Plugins** → **Add marketplace** に `sky21peanuts/usage-band` を入れ、**Add plugin** で追加します。
 
+### どのチャットでも常時表示する
+
+**ユーザースコープ**でインストールすると、新しいチャットや別のフォルダ（プロジェクト）でも、常に入力欄の上に表示されます。
+
+```
+claude plugin install usage-band --marketplace sky21peanuts/usage-band --scope user
+```
+
+- インストール後に開く**新しいチャット**から表示されます。すでに開いているチャットには反映されません（再起動か、新しいチャットを開いてください）。
+- 対話の `/plugin install` でスコープに「ユーザー」を選んでも、同じ状態になります。
+- スコープに「プロジェクト」を選ぶと、そのプロジェクトでだけ表示されます。
+- mod を Claude に作らせた直後のセッションでは、そのセッションだけに読み込まれた状態です。新しいチャットでは表示されないので、上のインストールが必要です。
+- 外すとき: `claude plugin uninstall usage-band`
+- 更新するとき: `claude plugin update usage-band`
+
 ### インストールせずに試す
 
 リポジトリを clone して、フォルダを直接指定します。
