@@ -107,7 +107,3 @@ claude plugin validate .
 ## ライセンス
 
 [MIT License](LICENSE)
-
-## 作業ログ・備忘
-
-作業ログは `WORKLOG.md` に記録しています（Git 管理外）。
