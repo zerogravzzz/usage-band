@@ -1,0 +1,11 @@
+{
+  "name": "usage-band",
+  "owner": { "name": "sky21peanuts" },
+  "plugins": [
+    {
+      "name": "usage-band",
+      "source": "./",
+      "description": "Shows the 5-hour session and weekly usage limits above the prompt"
+    }
+  ]
+}
