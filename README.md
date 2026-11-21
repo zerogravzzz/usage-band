@@ -17,7 +17,7 @@ Claude Code のプロンプト入力欄の上に、**5時間セッション**と
 ターミナルの Claude Code セッションで、次を入力します。
 
 ```
-/plugin install usage-band --marketplace sky21peanuts/usage-band
+/plugin install usage-band --marketplace zerogravzzz/usage-band
 ```
 
 `y` でマーケットプレイスを追加し、続けてスコープ（ユーザー / プロジェクト）を選びます。
@@ -25,17 +25,17 @@ Claude Code のプロンプト入力欄の上に、**5時間セッション**と
 シェルから行う場合:
 
 ```
-claude plugin install usage-band --marketplace sky21peanuts/usage-band
+claude plugin install usage-band --marketplace zerogravzzz/usage-band
 ```
 
-デスクトップアプリでは `/plugin` が使えません。プロンプト欄の **+** → **Plugins** → **Add marketplace** に `sky21peanuts/usage-band` を入れ、**Add plugin** で追加します。
+デスクトップアプリでは `/plugin` が使えません。プロンプト欄の **+** → **Plugins** → **Add marketplace** に `zerogravzzz/usage-band` を入れ、**Add plugin** で追加します。
 
 ### どのチャットでも常時表示する
 
 **ユーザースコープ**でインストールすると、新しいチャットや別のフォルダ（プロジェクト）でも、常に入力欄の上に表示されます。
 
 ```
-claude plugin install usage-band --marketplace sky21peanuts/usage-band --scope user
+claude plugin install usage-band --marketplace zerogravzzz/usage-band --scope user
 ```
 
 - インストール後に開く**新しいチャット**から表示されます。すでに開いているチャットには反映されません（再起動か、新しいチャットを開いてください）。
@@ -50,7 +50,7 @@ claude plugin install usage-band --marketplace sky21peanuts/usage-band --scope u
 リポジトリを clone して、フォルダを直接指定します。
 
 ```
-git clone https://github.com/sky21peanuts/usage-band.git
+git clone https://github.com/zerogravzzz/usage-band.git
 claude --plugin-dir ./usage-band
 ```
 
@@ -107,3 +107,12 @@ claude plugin validate .
 ## ライセンス
 
 未設定です。
+
+## 作業ログ・備忘
+
+### 2026-11-21
+
+- mod を作成し、GitHub に公開リポジトリとして公開した（検証は `claude plugin validate` で成功。LICENSE と icon の警告は公開ディレクトリ登録用なので無視）
+- 「どのチャットでも表示する」には、ユーザースコープでのインストールが必要と判明した。作成直後のセッションだけに読み込まれた状態では、新しいチャットで表示されない。README に手順を追記した
+- GitHub の username を変更した（旧名前から `zerogravzzz` へ）。README のインストール手順、`marketplace.json` の `owner`、ローカルのリモート URL、インストール済みの mod の参照を新しい名前に更新した
+- 備忘: D ドライブの同期処理がファイルにハードリンクを作るため、秘密情報スキャンがその場所では完走しない。作業用フォルダへコピーしてスキャンしている
