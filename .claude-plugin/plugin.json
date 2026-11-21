@@ -1,6 +1,7 @@
 {
   "name": "usage-band",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "Shows the 5-hour session and weekly usage limits above the prompt",
   "types": "./types/index.d.ts"
 }

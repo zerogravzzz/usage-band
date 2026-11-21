@@ -106,7 +106,7 @@ claude plugin validate .
 
 ## ライセンス
 
-未設定です。
+[MIT License](LICENSE)
 
 ## 作業ログ・備忘
 
@@ -116,3 +116,4 @@ claude plugin validate .
 - 「どのチャットでも表示する」には、ユーザースコープでのインストールが必要と判明した。作成直後のセッションだけに読み込まれた状態では、新しいチャットで表示されない。README に手順を追記した
 - GitHub の username を変更した（旧名前から `zerogravzzz` へ）。README のインストール手順、`marketplace.json` の `owner`、ローカルのリモート URL、インストール済みの mod の参照を新しい名前に更新した
 - 備忘: D ドライブの同期処理がファイルにハードリンクを作るため、秘密情報スキャンがその場所では完走しない。作業用フォルダへコピーしてスキャンしている
+- LICENSE（MIT、著作者は GitHub ユーザー名）を追加し、`plugin.json` に `"license": "MIT"` を設定した。公開ディレクトリ向けの LICENSE 警告は解消
